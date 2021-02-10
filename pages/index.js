@@ -1,65 +1,41 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import AirbnbExample from '../components/AirbnbExample'
+import { Container, Box, SimpleGrid, Center } from "@chakra-ui/react"
 
 export default function Home() {
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <AirbnbExample />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Container maxW="6xl"  borderRadius="base" border="1px" borderColor="gray.200">
+          <Center bg="white" height="180px" m={2}>
+            <Box padding="4" bg="gray.100" maxW="300px" my="24px">
+              There are many benefits to a joint design and development system. Not only
+              does it bring benefits to the design team.xx
+            </Box>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          </Center>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+          <SimpleGrid columns={[1, 2, 3, null, 4]} spacing={[2, null, 4, 6]}>
+            <Center bg="tomato" height="80px">x</Center>
+            <Center bg="red.800" color="white" height="80px">w</Center>
+            <Center bg="tomato" height="80px">a</Center>
+            <Center bg="teal.800" color="white" height="80px">TESTE</Center>
+            <Center bg="tomato" height="80px">c</Center>
+            <Center bg="tomato" height="80px">c</Center>
+            <Center bg="tomato" height="80px">c</Center>
+            <Center bg="tomato" height="80px">c</Center>
+            <Center bg="tomato" height="80px">c</Center>
+            <Center bg="tomato" height="80px">c</Center>
+          </SimpleGrid>
+        </Container>
     </div>
   )
 }
